@@ -3,7 +3,7 @@
   <remote name="android-ia" fetch="."/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>
 
-  <default remote="android-ia" revision="release/android-5.0.1_r1-ia1" sync-j="4"/>
+  <default remote="android-ia" revision="release/android-5.1.0_r1-ia0" sync-j="4"/>
 
   <project path="device/common" name="device_common" groups="pdk-cw-fs"/>
   <project path="device/generic/arm64" name="device_generic_arm64" groups="pdk"/>
@@ -30,7 +30,6 @@
   </project>
   <project path="cts" name="platform_cts" groups="cts,pdk-cw-fs"/>
   <project path="dalvik" name="platform_dalvik" groups="pdk-cw-fs"/>
-  <project path="developers/build" name="platform_developers_build"/>
   <project path="development" name="platform_development" groups="pdk-cw-fs"/>
   <project path="external/aac" name="platform_external_aac" groups="pdk"/>
   <project path="external/android-clat" name="platform_external_android-clat" groups="pdk-cw-fs"/>
@@ -56,6 +55,7 @@
   <project path="external/chromium_org/testing/gtest" name="platform_external_chromium_org_testing_gtest"/>
   <project path="external/chromium_org/third_party/WebKit" name="platform_external_chromium_org_third_party_WebKit"/>
   <project path="external/chromium_org/third_party/angle" name="platform_external_chromium_org_third_party_angle"/>
+  <project path="external/chromium_org/third_party/boringssl/src" name="platform_external_chromium_org_third_party_boringssl_src"/>
   <project path="external/chromium_org/third_party/brotli/src" name="platform_external_chromium_org_third_party_brotli_src"/>
   <project path="external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" name="platform_external_chromium_org_third_party_eyesfree_src_android_java_src_com_googlecode_eyesfree_bra"/>
   <project path="external/chromium_org/third_party/freetype" name="platform_external_chromium_org_third_party_freetype"/>
@@ -63,6 +63,7 @@
   <project path="external/chromium_org/third_party/leveldatabase/src" name="platform_external_chromium_org_third_party_leveldatabase_src"/>
   <project path="external/chromium_org/third_party/libaddressinput/src" name="platform_external_chromium_org_third_party_libaddressinput_src"/>
   <project path="external/chromium_org/third_party/libjingle/source/talk" name="platform_external_chromium_org_third_party_libjingle_source_talk"/>
+  <project path="external/chromium_org/third_party/libjpeg_turbo" name="platform_external_chromium_org_third_party_libjpeg_turbo"/>
   <project path="external/chromium_org/third_party/libphonenumber/src/phonenumbers" name="platform_external_chromium_org_third_party_libphonenumber_src_phonenumbers"/>
   <project path="external/chromium_org/third_party/libphonenumber/src/resources" name="platform_external_chromium_org_third_party_libphonenumber_src_resources"/>
   <project path="external/chromium_org/third_party/libsrtp" name="platform_external_chromium_org_third_party_libsrtp"/>
@@ -70,7 +71,6 @@
   <project path="external/chromium_org/third_party/libyuv" name="platform_external_chromium_org_third_party_libyuv"/>
   <project path="external/chromium_org/third_party/mesa/src" name="platform_external_chromium_org_third_party_mesa_src"/>
   <project path="external/chromium_org/third_party/openmax_dl" name="platform_external_chromium_org_third_party_openmax_dl"/>
-  <project path="external/chromium_org/third_party/openssl" name="platform_external_chromium_org_third_party_openssl"/>
   <project path="external/chromium_org/third_party/opus/src" name="platform_external_chromium_org_third_party_opus_src"/>
   <project path="external/chromium_org/third_party/ots" name="platform_external_chromium_org_third_party_ots"/>
   <project path="external/chromium_org/third_party/sfntly/cpp/src" name="platform_external_chromium_org_third_party_sfntly_cpp_src"/>
@@ -171,7 +171,6 @@
   <project path="external/libyuv" name="platform_external_libyuv" groups="libyuv,pdk-cw-fs"/>
   <project path="external/linux-tools-perf" name="platform_external_linux-tools-perf" groups="pdk-cw-fs"/>
   <project path="external/littlemock" name="platform_external_littlemock" groups="pdk-cw-fs"/>
-  <project path="external/lldb" name="platform_external_lldb" groups="pdk-cw-fs"/>
   <project path="external/llvm" name="platform_external_llvm" groups="pdk"/>
   <project path="external/ltrace" name="platform_external_ltrace" groups="pdk-cw-fs"/>
   <project path="external/lzma" name="platform_external_lzma" groups="pdk"/>
@@ -277,7 +276,6 @@
   <project path="frameworks/opt/vcard" name="platform_frameworks_opt_vcard" groups="pdk-cw-fs"/>
   <project path="frameworks/rs" name="platform_frameworks_rs" groups="pdk"/>
   <project path="frameworks/support" name="platform_frameworks_support" groups="pdk-cw-fs"/>
-  <project path="frameworks/testing" name="platform_frameworks_testing" groups="pdk-cw-fs"/>
   <project path="frameworks/volley" name="platform_frameworks_volley" groups="pdk-cw-fs"/>
   <project path="frameworks/webview" name="platform_frameworks_webview" groups="pdk-cw-fs"/>
   <project path="frameworks/wilhelm" name="platform_frameworks_wilhelm" groups="pdk-cw-fs"/>
@@ -382,7 +380,7 @@
   <project path="prebuilts/clang/linux-x86/3.1" name="platform_prebuilts_clang_linux-x86_3.1" groups="pdk,linux"/>
   <project path="prebuilts/clang/linux-x86/3.2" name="platform_prebuilts_clang_linux-x86_3.2" groups="pdk,linux"/>
   <project path="prebuilts/clang/linux-x86/arm/3.3" name="platform_prebuilts_clang_linux-x86_arm_3.3" groups="arm,linux,pdk-cw-fs"/>
-  <project path="prebuilts/clang/linux-x86/host/3.5" name="platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" remote="aosp" revision="refs/tags/android-5.0.1_r1"/>
+  <project path="prebuilts/clang/linux-x86/host/3.5" name="platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" remote="aosp" revision="refs/tags/android-5.1.0_r1"/>
   <project path="prebuilts/clang/linux-x86/mips/3.3" name="platform_prebuilts_clang_linux-x86_mips_3.3" groups="linux,mips,pdk-cw-fs"/>
   <project path="prebuilts/devtools" name="platform_prebuilts_devtools"/>
   <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.8" name="platform_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.8" groups="pdk,darwin,arm"/>
@@ -415,8 +413,8 @@
   <project path="prebuilts/ndk" name="platform_prebuilts_ndk" groups="pdk"/>
   <project path="prebuilts/python/darwin-x86/2.7.5" name="platform_prebuilts_python_darwin-x86_2.7.5" groups="darwin,pdk,pdk-cw-fs"/>
   <project path="prebuilts/python/linux-x86/2.7.5" name="platform_prebuilts_python_linux-x86_2.7.5" groups="linux,pdk,pdk-cw-fs"/>
-  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" remote="aosp" revision="refs/tags/android-5.0.1_r1"/>
-  <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" remote="aosp" revision="refs/tags/android-5.0.1_r1"/>
+  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" remote="aosp" revision="refs/tags/android-5.1.0_r1"/>
+  <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" remote="aosp" revision="refs/tags/android-5.1.0_r1"/>
   <project path="prebuilts/tools" name="platform_prebuilts_tools" groups="pdk,tools"/>
   <project path="sdk" name="platform_sdk" groups="pdk-cw-fs"/>
   <project path="system/core" name="platform_system_core" groups="pdk"/>
@@ -434,8 +432,13 @@
   <project path="external/iniparser" name="external_iniparser"/>
   <project path="external/libpciaccess" name="external_libpciaccess"/>
   <project path="external/syslinux" name="external_syslinux"/>
+  <project path="external/parameter-framework/core" name="hardware_intel_parameter-framework"/>
+  <project path="vendor/intel/audio/utilities" name="hardware_intel_audiocomms_utilities"/>
   <project path="hardware/intel/kernelflinger" name="hardware_intel_efi_kernelflinger"/>
+  <project path="hardware/intel/lights" name="hardware_intel_liblights"/>
+  <project path="vendor/intel/hardware/libmedia_utils" name="hardware_intel_libmedia_utils"/>
   <project path="external/libva" name="hardware_intel_libva"/>
+  <project path="vendor/intel/pstore-clean" name="hardware_intel_pstore-clean"/>
   <project path="bootable/userfastboot" name="platform_bootable_userfastboot"/>
   <project path="external/bluetooth/hcitools" name="platform_external_bluetooth_hcitools"/>
   <project path="external/bluetooth/libbt-vendor-linux" name="platform_external_bluetooth_libbt-vendor-linux"/>
@@ -445,6 +448,7 @@
   <project path="external/gnu-efi" name="platform_external_gnu-efi"/>
   <project path="external/mtools" name="platform_external_mtools"/>
   <project path="external/pciutils" name="platform_external_pciutils"/>
+  <project path="external/pystache" name="platform_external_pystache"/>
   <project path="external/sbsigntool" name="platform_external_sbsigntool"/>
   <project path="external/thermal_daemon" name="platform_external_thermal_daemon"/>
   <project path="external/uefi_shim" name="platform_external_uefi_shim"/>
@@ -458,5 +462,8 @@
   <project path="external/efivar" name="vendor_intel_external_efivar"/>
   <project path="external/openssl_efi" name="vendor_intel_external_openssl_efi"/>
   <project path="hardware/intel/efi_prebuilts/openssl" name="vendor_intel_external_openssl_efi_prebuilt"/>
+  <project path="external/parameter-framework/plugins/alsa" name="vendor_intel_hardware_audiocomms_parameter-framework_plugins_alsa"/>
+  <project path="external/parameter-framework/plugins/fs" name="vendor_intel_hardware_audiocomms_parameter-framework_plugins_fs"/>
   <project path="vendor/intel/ufo/gen7" name="vendor_intel_hardware_ufo_gen7"/>
+  <project path="vendor/intel/hardware/realtek/wlan" name="vendor_intel_hardware_realtek_wlan"/>
 </manifest>
