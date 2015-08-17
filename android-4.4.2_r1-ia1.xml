@@ -2,7 +2,7 @@
 <manifest>
   <remote fetch="." name="android-ia"/>
   
-  <default remote="android-ia" revision="release/android-4.4.2_r1-ia1" sync-j="4"/>
+  <default remote="android-ia" revision="refs/tags/android-4.4.2_r1-ia1" sync-j="4"/>
   
   <project name="device_common" path="device/common" revision="6a2995683de147791e516aae2ccb31fdfbe2ad30"/>
   <project groups="pdk" name="device_generic_armv7-a-neon" path="device/generic/armv7-a-neon" revision="0923313d90f03365d3fb881c3cb6d50802946b6b"/>
