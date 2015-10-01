@@ -3,7 +3,7 @@
   <remote name="android-ia" fetch="."/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>
 
-  <default remote="android-ia" revision="release/android-5.1.0_r1-ia0" sync-j="4"/>
+  <default remote="android-ia" revision="release/android-5.1.1_r16-ia0" sync-j="4"/>
 
   <project path="device/common" name="device_common" groups="pdk-cw-fs"/>
   <project path="device/generic/arm64" name="device_generic_arm64" groups="pdk"/>
@@ -23,7 +23,6 @@
   <project path="abi/cpp" name="platform_abi_cpp" groups="pdk"/>
   <project path="art" name="platform_art" groups="pdk"/>
   <project path="bionic" name="platform_bionic" groups="pdk"/>
-  <project path="bootable/bootloader/legacy" name="platform_bootable_bootloader_legacy" groups="pdk-cw-fs"/>
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk"/>
   <project path="build" name="platform_build" groups="pdk,tradefed">
     <copyfile dest="Makefile" src="core/root.mk"/>
@@ -37,7 +36,6 @@
   <project path="external/antlr" name="platform_external_antlr" groups="pdk-cw-fs,tradefed"/>
   <project path="external/apache-harmony" name="platform_external_apache-harmony" groups="pdk-cw-fs"/>
   <project path="external/apache-http" name="platform_external_apache-http" groups="pdk-cw-fs"/>
-  <project path="external/apache-qp" name="platform_external_apache-qp" groups="pdk-cw-fs"/>
   <project path="external/apache-xml" name="platform_external_apache-xml" groups="pdk-cw-fs"/>
   <project path="external/arduino" name="platform_external_arduino" groups="pdk-cw-fs"/>
   <project path="external/bison" name="platform_external_bison" groups="pdk"/>
@@ -183,7 +181,6 @@
   <project path="external/mockwebserver" name="platform_external_mockwebserver" groups="pdk-cw-fs"/>
   <project path="external/mp4parser" name="platform_external_mp4parser" groups="pdk-cw-fs"/>
   <project path="external/mtpd" name="platform_external_mtpd" groups="pdk-cw-fs"/>
-  <project path="external/nanohttpd" name="platform_external_nanohttpd"/>
   <project path="external/naver-fonts" name="platform_external_naver-fonts" groups="pdk-cw-fs"/>
   <project path="external/netcat" name="platform_external_netcat" groups="pdk-cw-fs"/>
   <project path="external/netperf" name="platform_external_netperf" groups="pdk-cw-fs"/>
@@ -250,7 +247,6 @@
   <project path="frameworks/compile/mclinker" name="platform_frameworks_compile_mclinker" groups="pdk"/>
   <project path="frameworks/compile/slang" name="platform_frameworks_compile_slang" groups="pdk"/>
   <project path="frameworks/ex" name="platform_frameworks_ex" groups="pdk-cw-fs"/>
-  <project path="frameworks/mff" name="platform_frameworks_mff" groups="pdk-cw-fs"/>
   <project path="frameworks/minikin" name="platform_frameworks_minikin" groups="pdk-cw-fs"/>
   <project path="frameworks/ml" name="platform_frameworks_ml" groups="pdk-cw-fs"/>
   <project path="frameworks/multidex" name="platform_frameworks_multidex" groups="pdk-cw-fs"/>
@@ -297,7 +293,6 @@
   <project path="hardware/ril" name="platform_hardware_ril" groups="pdk"/>
   <project path="libcore" name="platform_libcore" groups="pdk"/>
   <project path="libnativehelper" name="platform_libnativehelper" groups="pdk"/>
-  <project path="manifest" name="platform_manifest"/>
   <project path="ndk" name="platform_ndk"/>
   <project path="packages/apps/BasicSmsReceiver" name="platform_packages_apps_BasicSmsReceiver"/>
   <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" groups="pdk-cw-fs"/>
@@ -328,7 +323,6 @@
   <project path="packages/apps/Nfc" name="platform_packages_apps_Nfc"/>
   <project path="packages/apps/OneTimeInitializer" name="platform_packages_apps_OneTimeInitializer"/>
   <project path="packages/apps/PackageInstaller" name="platform_packages_apps_PackageInstaller"/>
-  <project path="packages/apps/Phone" name="platform_packages_apps_Phone"/>
   <project path="packages/apps/PhoneCommon" name="platform_packages_apps_PhoneCommon"/>
   <project path="packages/apps/Protips" name="platform_packages_apps_Protips"/>
   <project path="packages/apps/Provision" name="platform_packages_apps_Provision"/>
@@ -380,7 +374,7 @@
   <project path="prebuilts/clang/linux-x86/3.1" name="platform_prebuilts_clang_linux-x86_3.1" groups="pdk,linux"/>
   <project path="prebuilts/clang/linux-x86/3.2" name="platform_prebuilts_clang_linux-x86_3.2" groups="pdk,linux"/>
   <project path="prebuilts/clang/linux-x86/arm/3.3" name="platform_prebuilts_clang_linux-x86_arm_3.3" groups="arm,linux,pdk-cw-fs"/>
-  <project path="prebuilts/clang/linux-x86/host/3.5" name="platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" remote="aosp" revision="refs/tags/android-5.1.0_r1"/>
+  <project path="prebuilts/clang/linux-x86/host/3.5" name="platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" remote="aosp" revision="refs/tags/android-5.1.1_r16"/>
   <project path="prebuilts/clang/linux-x86/mips/3.3" name="platform_prebuilts_clang_linux-x86_mips_3.3" groups="linux,mips,pdk-cw-fs"/>
   <project path="prebuilts/devtools" name="platform_prebuilts_devtools"/>
   <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.8" name="platform_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.8" groups="pdk,darwin,arm"/>
@@ -413,8 +407,8 @@
   <project path="prebuilts/ndk" name="platform_prebuilts_ndk" groups="pdk"/>
   <project path="prebuilts/python/darwin-x86/2.7.5" name="platform_prebuilts_python_darwin-x86_2.7.5" groups="darwin,pdk,pdk-cw-fs"/>
   <project path="prebuilts/python/linux-x86/2.7.5" name="platform_prebuilts_python_linux-x86_2.7.5" groups="linux,pdk,pdk-cw-fs"/>
-  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" remote="aosp" revision="refs/tags/android-5.1.0_r1"/>
-  <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" remote="aosp" revision="refs/tags/android-5.1.0_r1"/>
+  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" remote="aosp" revision="refs/tags/android-5.1.1_r16"/>
+  <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" remote="aosp" revision="refs/tags/android-5.1.1_r16"/>
   <project path="prebuilts/tools" name="platform_prebuilts_tools" groups="pdk,tools"/>
   <project path="sdk" name="platform_sdk" groups="pdk-cw-fs"/>
   <project path="system/core" name="platform_system_core" groups="pdk"/>
@@ -428,6 +422,7 @@
   <project path="tools/swt" name="platform_tools_swt" groups="notdefault,tools"/>
   <project path="device/intel/gmin-kernel" name="device_intel_gmin-kernel"/>
   <project path="device/intel/mixins" name="device_intel_mixins"/>
+  <project path="device/intel/sepolicy" name="device_intel_sepolicy"/>
   <project path="external/drm" name="external_drm"/>
   <project path="external/iniparser" name="external_iniparser"/>
   <project path="external/libpciaccess" name="external_libpciaccess"/>
@@ -436,9 +431,9 @@
   <project path="vendor/intel/audio/utilities" name="hardware_intel_audiocomms_utilities"/>
   <project path="hardware/intel/kernelflinger" name="hardware_intel_efi_kernelflinger"/>
   <project path="hardware/intel/lights" name="hardware_intel_liblights"/>
-  <project path="vendor/intel/hardware/libmedia_utils" name="hardware_intel_libmedia_utils"/>
   <project path="external/libva" name="hardware_intel_libva"/>
   <project path="vendor/intel/pstore-clean" name="hardware_intel_pstore-clean"/>
+  <project path="hardware/intel/wlan/hostap_wcs" name="hardware_intel_wlan_hostap_wcs"/>
   <project path="bootable/userfastboot" name="platform_bootable_userfastboot"/>
   <project path="external/bluetooth/hcitools" name="platform_external_bluetooth_hcitools"/>
   <project path="external/bluetooth/libbt-vendor-linux" name="platform_external_bluetooth_libbt-vendor-linux"/>
@@ -452,18 +447,18 @@
   <project path="external/sbsigntool" name="platform_external_sbsigntool"/>
   <project path="external/thermal_daemon" name="platform_external_thermal_daemon"/>
   <project path="external/uefi_shim" name="platform_external_uefi_shim"/>
+  <project path="vendor/intel/fw/iwl" name="platform_vendor_intel_fw_iwl"/>
   <project path="vendor/intel/art-extension" name="vendor_intel_art-extension"/>
   <project path="device/intel/baytrail" name="vendor_intel_baytrail"/>
   <project path="device/intel/build" name="vendor_intel_build"/>
   <project path="device/intel/common" name="vendor_intel_common"/>
-  <project path="hardware/intel/efi_prebuilts/efitools" name="vendor_intel_external_efi_efitools_prebuilt"/>
   <project path="hardware/intel/efi_prebuilts/gnu-efi" name="vendor_intel_external_efi_gnu-efi_prebuilt"/>
-  <project path="hardware/intel/efi_prebuilts/uefi_shim" name="vendor_intel_external_efi_uefi_shim_prebuilt"/>
   <project path="external/efivar" name="vendor_intel_external_efivar"/>
-  <project path="external/openssl_efi" name="vendor_intel_external_openssl_efi"/>
-  <project path="hardware/intel/efi_prebuilts/openssl" name="vendor_intel_external_openssl_efi_prebuilt"/>
+  <project path="vendor/intel/fw/bluetooth/intel" name="vendor_intel_fw_bt_intel"/>
   <project path="external/parameter-framework/plugins/alsa" name="vendor_intel_hardware_audiocomms_parameter-framework_plugins_alsa"/>
   <project path="external/parameter-framework/plugins/fs" name="vendor_intel_hardware_audiocomms_parameter-framework_plugins_fs"/>
   <project path="vendor/intel/ufo/gen7" name="vendor_intel_hardware_ufo_gen7"/>
   <project path="vendor/intel/hardware/realtek/wlan" name="vendor_intel_hardware_realtek_wlan"/>
+  <project path="hardware/intel/bluedroid" name="wcs_vendor_intel_hardware_bt_wcs_bluedroid"/>
+  <project path="hardware/intel/libbt-vendor-intel" name="wcs_vendor_intel_hardware_bt_wcs_libbt"/>
 </manifest>
