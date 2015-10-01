@@ -3,7 +3,7 @@
   <remote name="android-ia" fetch="."/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>
 
-  <default remote="android-ia" revision="release/android-5.1.1_r16-ia0" sync-j="4"/>
+  <default remote="android-ia" revision="lollipop-mr1-release" sync-j="4"/>
 
   <project path="device/common" name="device_common" groups="pdk-cw-fs"/>
   <project path="device/generic/arm64" name="device_generic_arm64" groups="pdk"/>
