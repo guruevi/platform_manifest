@@ -461,4 +461,5 @@
   <project path="vendor/intel/hardware/realtek/wlan" name="vendor_intel_hardware_realtek_wlan"/>
   <project path="hardware/intel/bluedroid" name="wcs_vendor_intel_hardware_bt_wcs_bluedroid"/>
   <project path="hardware/intel/libbt-vendor-intel" name="wcs_vendor_intel_hardware_bt_wcs_libbt"/>
+  <project path="hardware/intel/audio" name="hardware_intel_audio"/>
 </manifest>
